@@ -1,0 +1,12 @@
+version: "3"
+services:
+  nginx:
+    image: springboot-nginx:0.3
+    ports:
+      - 80:80
+    depends_on:
+      - docker-springboot
+  docker-springboot:
+    build: .
+    expose:
+      - 8080
