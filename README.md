@@ -26,7 +26,7 @@ Springboot + nginx + docker default setting
 ###2. nginx + Springboot 를 연결하여 도커에 올리기
 ####2.1 nginx 이미지를 직접 빌드하여 할 경우
     ./nginx 하위 파일 참조
-    docker image -f nginx-Dockerfile --name springboot-nginx:0.1 .
+    docker image build -f nginx_Dockerfile -t springboot-nginx:0.1 .
 ####2.2 docker-compose.yml 을 만들어서 업로드 한다.
     docker-compose up
 
